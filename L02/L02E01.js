@@ -1,3 +1,17 @@
+//text logger skip
+console._log = console.log;
+console.log = function(arg0){
+    console._log.apply(window, arguments);
+
+    setTimeout(() => {
+        var el = document.getElementById('txt01');
+        el.innerHTML = el.innerHTML + (arg0 ? arg0.toString() : '') + '\n';
+    }, 1);
+};
+//text logger
+
+//START
+
 (function(){
     console.log(var1)
     var var1 = 1
