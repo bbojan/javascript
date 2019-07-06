@@ -36,9 +36,15 @@
         ...obj1,
         c:4,
         d:5,
+        car:'zastava',
+        color:'blue'
     };
 
     console.log(obj2)
+
+    const {car,color} = obj2;
+    console.log('color',color,', car',car);
+
 
 
     const map1 = new Map();
