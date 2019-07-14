@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import { BigItem } from './BigItem'
-import { List } from './List'
+import { ListCH } from './ListCH'
 
 const items = [
   { label: 'AAA' },
@@ -15,17 +15,12 @@ const items = [
 const App: React.FC = () => {
   return (
     <div className="App">
-      <List
-        items={items}
-        measureHeight={(_, index) => (index % 2 === 0 ? 40 : 80)}
-        renderItem={item => <BigItem label={item.label} />}
-      />
-      {/* <ListCH
+      <ListCH
         items={items}
         measureHeight={(_, index) => (index % 2 === 0 ? 40 : 80)}
       >
         {item => <BigItem label={item.label} />}
-      </ListCH> */}
+      </ListCH>
     </div>
   )
 }
