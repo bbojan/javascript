@@ -54,8 +54,8 @@
 
     delete map[7]
 
-    const entries2 = Object.entries(map).map(([key,value])=> ([value.name, value.id]))
-
+    const entries2 = Object.entries(map).map(([key, value])=> ([value.name, value.id]))
+`
     const Object_FromEntries = (entries) => {
         return entries.reduce((prev,[currentKey, currentValue]) => ({
             ...prev,
