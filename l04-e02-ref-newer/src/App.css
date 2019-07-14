@@ -1,0 +1,7 @@
+.App {
+  transform: scale(2);
+  transform-origin: 50% 50%;
+  position: absolute;
+  left: 300px;
+  top: 300px;
+}
