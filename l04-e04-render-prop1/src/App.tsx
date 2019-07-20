@@ -1,6 +1,5 @@
 import React from 'react'
 import './App.css'
-import { BigItem } from './BigItem'
 import { List } from './List'
 
 const items = [
@@ -18,7 +17,7 @@ const App: React.FC = () => {
       <List
         items={items}
         measureHeight={(_, index) => (index % 2 === 0 ? 40 : 80)}
-        renderItem={item => <BigItem label={item.label} />}
+        renderItem={item => <button>{item.label}</button>}
       />
     </div>
   )
