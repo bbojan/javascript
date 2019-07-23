@@ -3,9 +3,7 @@ import React from 'react'
 export type Size = { w: number; h: number }
 export type ResizeHandler = (size: Size) => void
 
-export const useOnWindowSizeChanged = (
-  onResize: ResizeHandler = (size: Size) => {}
-) => {
+export const useOnWindowSizeChanged = (onResize: ResizeHandler) => {
   React.useEffect(() => {
     const listener = () => {
       onResize({ w: window.innerWidth, h: window.innerHeight })
